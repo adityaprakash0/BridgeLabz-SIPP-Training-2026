@@ -4,7 +4,7 @@ public class Level1Assignments {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // ==========================================
+        
         // 1. Harry's Age
         // ==========================================
         System.out.println("\n--- 1. Harry's Age ---");
@@ -14,7 +14,7 @@ public class Level1Assignments {
         System.out.println("Harry's age in 2024 is " + harrysAge);
 
 
-        // ==========================================
+        
         // 2. Sam's Average Marks
         // ==========================================
         System.out.println("\n--- 2. Sam's Average Marks ---");
@@ -25,7 +25,7 @@ public class Level1Assignments {
         System.out.println("Sam's average mark in PCM is " + averageMark);
 
 
-        // ==========================================
+        
         // 3. Kilometers to Miles (Fixed Value)
         // ==========================================
         System.out.println("\n--- 3. Kilometers to Miles (Fixed) ---");
