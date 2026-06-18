@@ -22,4 +22,4 @@ public class DoubleOpt {
         
         input.close();
     }
-}
+}   
