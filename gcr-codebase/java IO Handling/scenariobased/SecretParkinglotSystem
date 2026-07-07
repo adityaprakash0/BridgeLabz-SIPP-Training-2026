@@ -1,0 +1,42 @@
+package Scenario-Based;
+import java.util.*;
+public class SecretMessageValidator {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter a secret code: ");
+        String code=sc.nextLine();
+
+        int vowelCount=0;
+        int consonantCount=0;
+        int digitCount=0;
+        int specialCharCount=0;
+
+        for (char ch : code.toCharArray()) {
+            if (Character.isDigit(ch)) {
+                digitCount++;
+            } else if (Character.isLetter(ch)) {
+                if ("AEIOUaeiou".indexOf(ch) != -1) {
+                    vowelCount++;
+                } else {
+                    consonantCount++;
+                }
+            } else {
+                specialCharCount++;
+            }
+        }
+
+        System.out.println("Vowels: " + vowelCount);
+        System.out.println("Consonants: " + consonantCount);
+        System.out.println("Digits: " + digitCount);
+        System.out.println("Special Characters: " + specialCharCount);
+
+        boolean isStrong = digitCount >= 2 && specialCharCount >= 1 && code.length() >= 8;
+        if (isStrong) {
+            System.out.println("The secret code is Strong.");
+        } else {
+            System.out.println("The secret code is Weak.");
+        }
+
+        sc.close();
+    }
+}
