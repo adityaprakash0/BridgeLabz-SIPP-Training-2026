@@ -1,0 +1,32 @@
+package Scenario-Based;
+import java.util.*;
+public class WordMatchSystem {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the first skill keyword: ");
+        String keyword1=sc.nextLine();
+        System.out.print("Enter the second skill keyword: ");
+        String keyword2=sc.nextLine();
+
+        if (areAnagrams(keyword1, keyword2)) {
+            System.out.println("The keywords are anagrams.");
+        } else {
+            System.out.println("The keywords are not anagrams.");
+        }
+
+        System.out.println("First keyword in uppercase: " + keyword1.toUpperCase());
+        System.out.println("Second keyword in uppercase: " + keyword2.toUpperCase());
+        System.out.println("Length of first keyword: " + keyword1.length());
+        System.out.println("Length of second keyword: " + keyword2.length());
+
+        sc.close();
+    }
+
+    private static boolean areAnagrams(String str1, String str2) {
+        char[] arr1 = str1.replaceAll("\\s", "").toLowerCase().toCharArray();
+        char[] arr2 = str2.replaceAll("\\s", "").toLowerCase().toCharArray();
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        return Arrays.equals(arr1, arr2);
+    }
+}
