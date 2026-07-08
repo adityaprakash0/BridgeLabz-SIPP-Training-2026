@@ -1,0 +1,17 @@
+public class FibonacciCalculator {
+
+    public static int findNthFibonacci(int n) {
+        if (n == 0) return 0;
+        if (n == 1) return 1;
+        
+        return findNthFibonacci(n - 1) + findNthFibonacci(n - 2);
+    }
+
+    public static void main(String[] args) {
+        int n = 6;
+        int result = findNthFibonacci(n);
+        
+        System.out.println("Input:\n" + n);
+        System.out.println("Output:\n" + result);
+    }
+}

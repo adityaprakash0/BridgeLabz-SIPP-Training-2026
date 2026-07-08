@@ -1,0 +1,26 @@
+package ScenarioBased;
+import java.util.*;
+public class UsernameValidator {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter a username: ");
+        String username=sc.nextLine();
+        if(username.contains(" ")){
+            System.out.println("Username should not contain spaces.");
+        }else{
+            System.out.println("Username does not contain spaces.");
+        }
+        int characterCount=username.length();
+        System.out.println("Total number of characters: "+characterCount);
+        String uppercaseUsername=username.toUpperCase();
+        System.out.println("Username in uppercase: "+uppercaseUsername);
+        String reversedUsername=new StringBuilder(username).reverse().toString();
+        if (username.equalsIgnoreCase(reversedUsername)) {
+            System.out.println("The username is a palindrome.");
+        } else {
+            System.out.println("The username is not a palindrome.");
+        }
+
+        sc.close();
+    }
+}
